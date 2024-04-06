@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import ContactsPage from "./containers/contactsPage/contactsPage";
+import AppointmentsPage from "./containers/appointmentsPage/appointmentsPage";
+import Root from "./components/root/root";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+export default function App(){
+    const [contacts, setContacts] = useState([]);
+    const [appointments, setAppointments] = useState([]);
+
+
+    return(
+        <BrowserRouter>
+            <Routes>
+                <Route  path = '/' element= {<Root/>}>
+                    <Route  path = 'contacts' element= {<ContactsPage contacts={contacts} setContacts={setContacts}/>}/>
+                    <Route  path = 'appointments' element= {<AppointmentsPage appointments={appointments} setAppointments= {setAppointments}/>}/>
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
-export default App;
