@@ -3,19 +3,18 @@ import ContactForm from "../../components/contactForm/contactForm";
 import TileList from "../../components/tileList/tileList";
 
 
-export default function ContactsPage({contacts, setContacts}){
+export default function ContactsPage({contacts, onAddContact}){
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
 
     const handleSubmit = (e) => {
+        onAddContact(name, email, phone)
         e.preventDefault();
-        setContacts([name, email, phone])
+   
         /*setName('');
         setEmail('');
         setPhone('');*/
-
-
     }
 
     return(
@@ -29,12 +28,12 @@ export default function ContactsPage({contacts, setContacts}){
                     setName = {setName}
                     setEmail = {setEmail}
                     setPhone = {setPhone}
-                    handleSubmit={handleSubmit}
+                    onSubmit={handleSubmit}
                     />
             </section>
             <section>
                 <h2>Contacts</h2>
-                <TileList data = {contacts} keys={[name,email,phone]} />
+                <TileList data = {contacts} keys={['Name','Email','Phone']} />
             </section>
         </div>
     )

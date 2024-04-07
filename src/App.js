@@ -10,13 +10,24 @@ export default function App(){
     const [contacts, setContacts] = useState([]);
     const [appointments, setAppointments] = useState([]);
 
+    const handleAddContact = (Name, Email, Phone) => {
+        const newContact = {Name, Email, Phone};
+        setContacts([...contacts, newContact]);
+
+      };
+
+    const handleAddAppointment = (Title, Date, Time, Contact) =>{
+        const newAppointment = {Title, Date, Time, Contact};
+        setAppointments([...appointments, newAppointment]);
+    }
+    
 
     return(
         <BrowserRouter>
             <Routes>
                 <Route  path = '/' element= {<Root/>}>
-                    <Route  path = 'contacts' element= {<ContactsPage contacts={contacts} setContacts={setContacts}/>}/>
-                    <Route  path = 'appointments' element= {<AppointmentsPage appointments={appointments} setAppointments= {setAppointments}/>}/>
+                    <Route  path = 'contacts' element= {<ContactsPage contacts={contacts} onAddContact={handleAddContact}/>}/>
+                    <Route  path = 'appointments' element= {<AppointmentsPage appointments={appointments} contacts={contacts} onAddAppointment={handleAddAppointment}/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
