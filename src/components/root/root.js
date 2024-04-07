@@ -7,11 +7,11 @@ export default function Root(){
         <>
             <div className='root'>
                 <section className="contact">
-                    <NavLink to='/contacts'> Contacts </NavLink>
+                    <NavLink to='/contacts' className='navLink'> Contacts </NavLink>
                 </section>
     
                 <section className="appointment">
-                    <NavLink to='/appointments'> Appointments </NavLink>
+                    <NavLink to='/appointments' className='navLink'> Appointments </NavLink>
                 </section>
             
             </div>

@@ -11,18 +11,15 @@ export default function AppointmentsPage({appointments, contacts, onAddAppointme
     const handleSubmit = (e) =>{
         onAddAppointment(title, date, time)
         e.preventDefault();
-
         /*setTitle('');
         setDate('');
         setTime('');*/
     }
-
     return(
 
         <div className="appointment">
             <section>
                 <h2>Add Appointment</h2>
-
                 <AppointmentForm 
                     title={title}
                     date={date}
@@ -33,7 +30,6 @@ export default function AppointmentsPage({appointments, contacts, onAddAppointme
                     setTime={setTime}
                     onSubmit={handleSubmit}
                 />
-
             </section> 
 
             <section>

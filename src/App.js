@@ -3,6 +3,7 @@ import ContactsPage from "./containers/contactsPage/contactsPage";
 import AppointmentsPage from "./containers/appointmentsPage/appointmentsPage";
 import Root from "./components/root/root";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './App.css'
 
 
 
@@ -23,14 +24,16 @@ export default function App(){
     
 
     return(
+        <div className="appContainer">
         <BrowserRouter>
             <Routes>
-                <Route  path = '/' element= {<Root/>}>
+                <Route path = '/' element= {<Root className='root'/>}>
                     <Route  path = 'contacts' element= {<ContactsPage contacts={contacts} onAddContact={handleAddContact}/>}/>
                     <Route  path = 'appointments' element= {<AppointmentsPage appointments={appointments} contacts={contacts} onAddAppointment={handleAddAppointment}/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
+        </div>
     )
 }
 

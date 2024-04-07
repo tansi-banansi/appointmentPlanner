@@ -1,4 +1,5 @@
 import React from "react"
+import '../../App.css'
 
 export default function ContactForm({name, setName, phone, setPhone, email, setEmail ,onSubmit}){
 
@@ -16,15 +17,24 @@ export default function ContactForm({name, setName, phone, setPhone, email, setE
 
     return (
         <form className="contactForm" onSubmit={onSubmit}>
-            <label for='name'>Name:</label>
-            <input type="text" id="name" name="name" value={name} onChange={handleNameChange} required/>
+            <div className="inputContainer">
+                <label for='name'>Name:</label> 
+                <br/>
+                <input className="inputField" type="text" id="name" name="name" value={name} onChange={handleNameChange} required/>
+            </div>
 
-            <label for='email'>Email:</label>
-            <input type='email' id="email" name="email" value={email} onChange={handleEmailChange} required/>
+            <div className="inputContainer">
+                <label for='email'>Email:</label>
+                <br/>
+                <input className="inputField" type='email' id="email" name="email" value={email} onChange={handleEmailChange} required/>
+            </div>
 
-            <label for='phone'>Phone:</label>
-            <input type='tel' id="phone" name="phone" value={phone} onChange={handlePhoneChange} required/>
-
+            <div className="inputContainer">
+                <label for='phone'>Phone:</label>
+                <br/>
+                <input className="inputField" type='tel' id="phone" name="phone" value={phone} onChange={handlePhoneChange} required/>
+            </div>
+            
             <button type='submit'>Add Contact</button>
         </form>
     )

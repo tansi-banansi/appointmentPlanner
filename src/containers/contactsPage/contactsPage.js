@@ -18,7 +18,7 @@ export default function ContactsPage({contacts, onAddContact}){
     }
 
     return(
-        <div>
+        <div className="contactPage">
             <section>
                 <h2>Add Contact</h2>
                 <ContactForm 
