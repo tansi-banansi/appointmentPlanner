@@ -26,10 +26,10 @@ export default function AppointmentForm({title,setTitle, date, setDate, time, se
                 <input type='time' id="time" name="time" value={time} onChange={handleTimeChange} required/>
 
                 <label for='contact'>Contact:</label>
-                <select type="">
-
+                <select id="contact" name="contact">
+                    {contacts.map(contact => <option key={contact.Name} value={contact.Name} required>{contact.Name}</option>
+                    )}
                 </select>
-
                 <button type="submit">Add Appointment</button>
             </form>
         </div>
