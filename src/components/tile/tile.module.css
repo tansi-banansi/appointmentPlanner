@@ -1,0 +1,17 @@
+.Title{
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15) ;
+    padding: 0.5vw 1.5vw;
+}
+
+.Key{
+    font-weight: 600;
+    letter-spacing: 0.05vw;
+    margin-right: 0.25vw;
+    font-size: 1vw;
+}
+
+.Item{
+    font-size: 1vw;
+    letter-spacing: 0.05vw;
+}

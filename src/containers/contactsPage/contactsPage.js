@@ -13,9 +13,9 @@ export default function ContactsPage({contacts, onAddContact}){
         onAddContact(name, email, phone)
         e.preventDefault();
    
-        /*setName('');
+        setName('');
         setEmail('');
-        setPhone('');*/
+        setPhone('');
     }
 
     return(
