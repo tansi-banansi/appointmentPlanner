@@ -1,17 +1,18 @@
 import React from "react";
 import { NavLink , Outlet} from "react-router-dom";
+import styles from './root.module.css'
 
 export default function Root(){
 
     return (
         <>
-            <div className='root'>
-                <section className="contact">
-                    <NavLink to='/contacts' className='navLink'> Contacts </NavLink>
+            <div className={styles.Root}>
+                <section >
+                    <NavLink to='/contacts' className={styles.NavLink}> Contacts </NavLink>
                 </section>
     
-                <section className="appointment">
-                    <NavLink to='/appointments' className='navLink'> Appointments </NavLink>
+                <section>
+                    <NavLink to='/appointments' className={styles.NavLink}> Appointments </NavLink>
                 </section>
             
             </div>

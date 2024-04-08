@@ -1,0 +1,23 @@
+.Root{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0 3vw;
+    height: 2.5vw;
+    border-bottom: 1px solid rgb(114, 114, 114);
+}
+
+.NavLink{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(110, 110, 110);
+    font-size: 1vw;
+    margin: 0 3vw;
+    width: 120px;
+}
+
+.NavLink:hover{
+    color: rgb(32, 32, 32);
+    font-weight: 600;
+}
