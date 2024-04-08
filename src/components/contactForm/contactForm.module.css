@@ -32,6 +32,7 @@ label{
     font-weight: 500;
     margin: 0.25vw 0;
     box-shadow: 0 3px 3px rgba(104, 104, 104, 0.5);
+    
 }
 
 .SubmitButton:hover{

@@ -4,7 +4,7 @@ import TileList from "../../components/tileList/tileList";
 import styles from './contactsPage.module.css'
 
 
-export default function ContactsPage({contacts, onAddContact}){
+export default function ContactsPage({contacts, onAddContact, onRemoveContact}){
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -12,7 +12,6 @@ export default function ContactsPage({contacts, onAddContact}){
     const handleSubmit = (e) => {
         onAddContact(name, email, phone)
         e.preventDefault();
-   
         setName('');
         setEmail('');
         setPhone('');
@@ -34,7 +33,7 @@ export default function ContactsPage({contacts, onAddContact}){
             </section>
             <section>
                 <h2 className={styles.Section}>Contacts</h2>
-                <TileList data = {contacts} keys={['Name','Email','Phone']} />
+                <TileList data = {contacts} keys={['Name','Email','Phone']} onRemove={onRemoveContact}/>
             </section>
         </div>
     )

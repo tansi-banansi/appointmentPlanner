@@ -1,13 +1,38 @@
-.Title{
+.Tile{
     background-color: rgba(255, 255, 255, 0.75);
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15) ;
-    padding: 0.5vw 1.5vw;
+    padding: 0.25vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+p{
+    margin: 1vw 0.25vw;
+}
+
+.TileButton{
+
+    font-size: 0.9vw;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: rgb(157, 142, 129);
+    margin: 0.75vw 0.25vw;
+    padding: 0.5vw;
+
+}
+
+.TileButton:hover{
+    color: rgb(24, 22, 19);
+    background-color:rgba(197, 172, 154, 0.277) ;
+    font-weight: 500;
+    
 }
 
 .Key{
     font-weight: 600;
     letter-spacing: 0.05vw;
-    margin-right: 0.25vw;
     font-size: 1vw;
 }
 

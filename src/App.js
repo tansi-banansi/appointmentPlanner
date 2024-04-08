@@ -17,6 +17,11 @@ export default function App(){
 
       };
 
+    const handleRemoveContact = (contact) =>{
+        setContacts(contacts.filter(item => item !== contact))
+
+    }
+
     const handleAddAppointment = (Title, Date, Time, Contact) =>{
         const newAppointment = {Title, Date, Time, Contact};
         setAppointments([...appointments, newAppointment]);
@@ -28,7 +33,7 @@ export default function App(){
         <BrowserRouter>
             <Routes>
                 <Route path = '/' element= {<Root className='root'/>}>
-                    <Route  path = 'contacts' element= {<ContactsPage contacts={contacts} onAddContact={handleAddContact}/>}/>
+                    <Route  path = 'contacts' element= {<ContactsPage contacts={contacts} onAddContact={handleAddContact} onRemoveContact = {handleRemoveContact}/>}/>
                     <Route  path = 'appointments' element= {<AppointmentsPage appointments={appointments} contacts={contacts} onAddAppointment={handleAddAppointment}/>}/>
                 </Route>
             </Routes>
