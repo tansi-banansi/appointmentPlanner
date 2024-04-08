@@ -16,8 +16,18 @@
 }
 
 .appContainer::-webkit-scrollbar{
-    background-color: rgb(52, 52, 52);
-    height: 50px;
+    background-color: rgb(192, 192, 192);
 }
+
+.appContainer::-webkit-scrollbar {
+    width: 0.75vw; 
+    }
+    
+.appContainer::-webkit-scrollbar-thumb {
+    background: rgb(92, 74, 58); 
+
+   
+}
+    
 
 

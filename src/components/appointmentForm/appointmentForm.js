@@ -1,6 +1,7 @@
 import React from "react";
+import styles from './appointment.module.css'
 
-export default function AppointmentForm({title,setTitle, date, setDate, time, setTime, contacts, onSubmit}){
+export default function AppointmentForm({title,setTitle, date, setDate, time, setTime, contact, setContact, contacts, onSubmit}){
     
     const handleTitleChange = (e) =>{
         setTitle(e.target.value)
@@ -11,27 +12,47 @@ export default function AppointmentForm({title,setTitle, date, setDate, time, se
     const handleTimeChange = (e) =>{
         setTime(e.target.value)
     }
+
+    const handleContactChange = (e) =>{
+        setContact(e.target.value)
+    }
     
 
     return(
-        <div className="appointmentForm">
-            <form onSubmit={onSubmit}>
+
+        <form onSubmit={onSubmit} className={styles.AppointmentForm}>
+            <div className={styles.InputContainer}>
                 <label for='title'>Title:</label>
-                <input type="text" id="title" name="title" value={title} onChange={handleTitleChange} required/>
+                <br/>
+                <input className={styles.InputField} type="text" id="title" name="title" value={title} onChange={handleTitleChange} required/>
+            </div>
 
+            <div className={styles.InputContainer}>
                 <label for='date'>Date:</label>
-                <input type='date' id="date" name="date" value={date} onChange={handleDateChange} required/>
+                <br/>
+                <input className={styles.InputField} type='date' id="date" name="date" value={date} onChange={handleDateChange} required/>
+            </div>
 
+            <div className={styles.InputContainer}>
                 <label for='time'>Time:</label>
-                <input type='time' id="time" name="time" value={time} onChange={handleTimeChange} required/>
+                <br/>
+                <input className={styles.InputField} type='time' id="time" name="time" value={time} onChange={handleTimeChange} required/>
+            </div>
 
+            <div className={styles.InputContainer}>
                 <label for='contact'>Contact:</label>
-                <select id="contact" name="contact">
-                    {contacts.map(contact => <option key={contact.Name} value={contact.Name} required>{contact.Name}</option>
+                <br/>
+                <select className={styles.SelectField} id="contact" name="contact" value={contact} onChange={handleContactChange} required>
+                    {contacts.map(contact => <option key={contact.Name} value={contact.Name} >{contact.Name}</option>
                     )}
                 </select>
-                <button type="submit">Add Appointment</button>
-            </form>
-        </div>
+
+
+            </div>
+
+            <button className={styles.SubmitButton} type="submit">Add Appointment</button>
+
+        </form>
+
     )
 }

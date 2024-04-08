@@ -4,7 +4,7 @@
     justify-content: start;
     margin: 0 3vw;
     height: 2.5vw;
-    border-bottom: 1px solid rgb(114, 114, 114);
+    border-bottom: 1.5px solid rgb(114, 114, 114);
 }
 
 .NavLink{
@@ -20,4 +20,5 @@
 .NavLink:hover{
     color: rgb(32, 32, 32);
     font-weight: 600;
+
 }
