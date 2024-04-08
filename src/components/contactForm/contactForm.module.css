@@ -1,0 +1,40 @@
+.InputField{
+    box-sizing: border-box;
+    width: 30%;
+    height: 2vw;
+    border-radius: 0.25vw;
+    font-size: 1vw;
+    padding:  1vw 0.5vw;
+    margin-top: 0.5vw ;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(114, 114, 114);
+    letter-spacing: 0.1vw;
+}
+
+.InputContainer{
+    margin: 1.5vw 0vw;
+}
+
+label{
+    font-size: 1.25vw;
+    letter-spacing: 0.15vw;
+
+}
+
+.SubmitButton{
+    background-color: rgb(146, 127, 111);
+    font-size: 1vw;
+    color: white;
+    border-radius: 5vw;
+    padding: 0.5vw 2vw;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0.25vw 0;
+    box-shadow: 0 3px 3px rgba(104, 104, 104, 0.5);
+}
+
+.SubmitButton:hover{
+    cursor: pointer;
+    background-color: rgb(92, 74, 58);
+}

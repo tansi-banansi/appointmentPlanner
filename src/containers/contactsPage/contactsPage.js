@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import ContactForm from "../../components/contactForm/contactForm";
 import TileList from "../../components/tileList/tileList";
+import styles from './contactsPage.module.css'
 
 
 export default function ContactsPage({contacts, onAddContact}){
@@ -18,10 +19,10 @@ export default function ContactsPage({contacts, onAddContact}){
     }
 
     return(
-        <div className="contactPage">
+        <div className={styles.ContactsPage}>
             <section>
-                <h2>Add Contact</h2>
-                <ContactForm 
+                <h2 className={styles.Section}>Add Contact</h2>
+                <ContactForm className={styles.ContactsPage}
                     name = {name}
                     email = {email}
                     phone = {phone}
@@ -32,7 +33,7 @@ export default function ContactsPage({contacts, onAddContact}){
                     />
             </section>
             <section>
-                <h2>Contacts</h2>
+                <h2 className={styles.Section}>Contacts</h2>
                 <TileList data = {contacts} keys={['Name','Email','Phone']} />
             </section>
         </div>

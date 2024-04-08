@@ -1,5 +1,5 @@
 import React from "react"
-import '../../App.css'
+import styles from './contactForm.module.css'
 
 export default function ContactForm({name, setName, phone, setPhone, email, setEmail ,onSubmit}){
 
@@ -16,26 +16,26 @@ export default function ContactForm({name, setName, phone, setPhone, email, setE
     }
 
     return (
-        <form className="contactForm" onSubmit={onSubmit}>
-            <div className="inputContainer">
+        <form className={styles.ContactForm} onSubmit={onSubmit}>
+            <div className={styles.InputContainer}>
                 <label for='name'>Name:</label> 
                 <br/>
-                <input className="inputField" type="text" id="name" name="name" value={name} onChange={handleNameChange} required/>
+                <input className={styles.InputField} type="text" id="name" name="name" value={name} onChange={handleNameChange} required/>
             </div>
 
-            <div className="inputContainer">
+            <div className={styles.InputContainer}>
                 <label for='email'>Email:</label>
                 <br/>
-                <input className="inputField" type='email' id="email" name="email" value={email} onChange={handleEmailChange} required/>
+                <input className={styles.InputField} type='email' id="email" name="email" value={email} onChange={handleEmailChange} required/>
             </div>
 
-            <div className="inputContainer">
+            <div className={styles.InputContainer}>
                 <label for='phone'>Phone:</label>
                 <br/>
-                <input className="inputField" type='tel' id="phone" name="phone" value={phone} onChange={handlePhoneChange} required/>
+                <input className={styles.InputField} type='tel' id="phone" name="phone" value={phone} onChange={handlePhoneChange} required/>
             </div>
             
-            <button type='submit'>Add Contact</button>
+            <button className={styles.SubmitButton} type='submit'>Add Contact</button>
         </form>
     )
 }
