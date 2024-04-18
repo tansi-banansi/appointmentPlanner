@@ -36,10 +36,10 @@ export default function App(){
         <div className="appContainer">
         <BrowserRouter>
             <Routes>
-                <Route path = '/' element= {<Root className='root'/>}>
-                    <Route  path = 'contacts' element= {<ContactsPage contacts={contacts} onAddContact={handleAddContact} onRemoveContact = {handleRemoveContact}/>}/>
-                    <Route  path = 'appointments' element= {<AppointmentsPage appointments={appointments} contacts={contacts} onAddAppointment={handleAddAppointment} onRemoveAppointment = {handleRemoveAppointment}/>}/>
-                </Route>
+                <Route path = '/' element= {<Root className='root'/>}/>
+                <Route  path = '/contacts' element= {<ContactsPage contacts={contacts} onAddContact={handleAddContact} onRemoveContact = {handleRemoveContact}/>}/>
+                <Route  path = '/appointments' element= {<AppointmentsPage appointments={appointments} contacts={contacts} onAddAppointment={handleAddAppointment} onRemoveAppointment = {handleRemoveAppointment}/>}/>
+                
             </Routes>
         </BrowserRouter>
         </div>

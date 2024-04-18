@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import ContactForm from "../../components/contactForm/contactForm";
 import TileList from "../../components/tileList/tileList";
 import styles from './contactsPage.module.css'
+import Root from "../../components/root/root";
 
 
 export default function ContactsPage({contacts, onAddContact, onRemoveContact}){
@@ -18,7 +19,11 @@ export default function ContactsPage({contacts, onAddContact, onRemoveContact}){
     }
 
     return(
+
+        <>
+        <Root/>
         <div className={styles.ContactsPage}>
+            
             <section>
                 <h2 className={styles.Section}>Add Contact</h2>
                 <ContactForm className={styles.ContactsPage}
@@ -36,5 +41,7 @@ export default function ContactsPage({contacts, onAddContact, onRemoveContact}){
                 <TileList data = {contacts} keys={['Name','Email','Phone']} onRemove={onRemoveContact}/>
             </section>
         </div>
+        </>
+        
     )
 }

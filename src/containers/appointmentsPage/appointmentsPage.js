@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import AppointmentForm from "../../components/appointmentForm/appointmentForm";
 import TileList from "../../components/tileList/tileList";
 import styles from './appointmentsPage.module.css'
+import Root from "../../components/root/root";
 
 
 export default function AppointmentsPage({appointments, contacts, onAddAppointment, onRemoveAppointment}){
@@ -20,7 +21,11 @@ export default function AppointmentsPage({appointments, contacts, onAddAppointme
     }
     return(
 
+       <>
+        <Root/>
+        
         <div className={styles.AppointmentsPage}>
+           
             <section>
                 <h2 className={styles.Section}>Add Appointment</h2>
                 <AppointmentForm 
@@ -42,6 +47,7 @@ export default function AppointmentsPage({appointments, contacts, onAddAppointme
                 <TileList data = {appointments} keys={['Title','Date','Time', 'Contact']} onRemove={onRemoveAppointment}/>
             </section>
         </div>
+        </>
     )
 }
 
