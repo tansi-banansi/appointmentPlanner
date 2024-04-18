@@ -1,8 +1,8 @@
 import React, {useState} from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import ContactsPage from "./containers/contactsPage/contactsPage";
 import AppointmentsPage from "./containers/appointmentsPage/appointmentsPage";
 import Root from "./components/root/root";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 
 
@@ -34,14 +34,14 @@ export default function App(){
 
     return(
         <div className="appContainer">
-        <BrowserRouter>
+        <Router>
             <Routes>
                 <Route path = '/' element= {<Root className='root'/>}/>
                 <Route  path = '/contacts' element= {<ContactsPage contacts={contacts} onAddContact={handleAddContact} onRemoveContact = {handleRemoveContact}/>}/>
                 <Route  path = '/appointments' element= {<AppointmentsPage appointments={appointments} contacts={contacts} onAddAppointment={handleAddAppointment} onRemoveAppointment = {handleRemoveAppointment}/>}/>
                 
             </Routes>
-        </BrowserRouter>
+        </Router>
         </div>
     )
 }

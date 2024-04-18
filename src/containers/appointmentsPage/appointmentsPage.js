@@ -14,16 +14,16 @@ export default function AppointmentsPage({appointments, contacts, onAddAppointme
     const handleSubmit = (e) =>{
         onAddAppointment(title, date, time, contact)
         e.preventDefault();
-        /*setTitle('');
+        setTitle('');
         setDate('');
         setTime('');
-        setContact('');*/
+        setContact('');
     }
     return(
 
        <>
         <Root/>
-        
+
         <div className={styles.AppointmentsPage}>
            
             <section>
